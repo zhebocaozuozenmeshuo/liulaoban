@@ -1,0 +1,17 @@
+1. create repo
+2.
+echo "# liulaoban" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git remote add origin git@github.com:zhebocaozuozenmeshuo/liulaoban.git
+git push -u origin master
+
+删掉key 不成功
+cd ~/.ssh/id_rsa_pub
+rm ~/.ssh/id_rsa_pub
+rm ~/.ssh/kown_hosts
+
+2.ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
+
+3.cat ~/.ssh/id_rsa.pub

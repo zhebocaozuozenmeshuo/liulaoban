@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>刘老板的小铺</title>
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="http://at.alicdn.com/t/font_503612_lx6jfw7hb8v0lik9.css">
+  <style>
+    html, body {
+      height: 100%;
+    }
+    header {
+      position: relative;
+      height: 100%;
+      min-height: 600px;
+      background: #000 url(img/首页2.jpg) center center no-repeat;
+      background-size: cover;
+    }
+    header::before {
+      content: '';
+      display: block;
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      background: rgba(255, 255, 255, .08);
+      z-index: -1;
+    }
+    header .logo {
+      color: #f7ba3e;
+      font-size: 32px;
+      float: left;
+      margin-top: 10px;
+      /* position: absolute;
+      top: 30px;
+      left: 30px; */
+    }
+    header .nav {
+      float: right;
+    }
+    header .nav >li {
+      float: left;
+      margin: 10px;
+    }
+    header .nav a { 
+      display: block;
+      padding: 5px;
+      border-radius: 4px;
+      color: #fff;
+      font-size: 16px;
+    }
+    header .nav a:hover {
+      background-color: #ca4406;
+    }
+    header .intro {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: #fff;
+      text-align: center;
+    }
+    header .intro h1 {
+      font-size: 41px;
+    }
+    header .intro h2 {
+      font-size: 47px;
+      margin-top: 20px;
+    }
+    header .intro .button {
+      margin-top: 20px;
+    }
+    section {
+      margin-top: 30px;
+      text-align: center;
+    }
+    section > h2 {
+      font-size: 40px;
+    }
+    section > p {
+      font-size: 10px;
+    }
+    section > ul .iconfont {
+      font-size: 60px;
+    }
+    section .family-intro > li {
+      float: left;
+      width: 33.33%;
+      padding: 10px 20px;
+    }
+    section > ul p {
+      margin-top: 10px;
+    }
+    section .family figure {
+      width: calc(33.33% - 20px);
+      height: 270px;
+      margin: 10px;
+      float: left;
+    }
+    section .family a {
+      display: block;
+      height: 200px;
+    }
+    section .family img {
+      width: 100%;
+      height: 100%;
+    }
+    section .family figcaption {
+      font-size: 18px;
+      font-weight: bold;
+      margin-top: 10px;
+    }
+    section .family p {
+      color: #666;
+      margin-top: 10px;
+    }
+    section .timeline img,
+    section .timeline .img {
+      width: 100px;
+      height: 100px;
+      border: 3px solid lightblue;
+      border-radius: 50%;
+    }
+    section .timeline .img {
+      display: inline-block;
+      text-align: center;
+      padding: 21px;
+      font-size: 17px;
+      line-height: 17px;
+    }
+    section .timeline > li {
+      position: relative;
+      margin-top: 20px;
+    }
+    section .timeline > li:nth-child(odd) {
+      padding-right: calc(50% - 50px);
+      text-align: right;
+    }
+    section .timeline > li:nth-child(odd) img{
+      float: right;
+    }
+    section .timeline > li::after {
+      content: '';
+      display: block;
+      clear: both;
+    }
+    section .timeline dl{
+      margin-right: 130px;
+    }
+    section .timeline > li:nth-child(even) {
+      padding-left: calc(50% - 50px);
+      text-align: left;
+    }
+    section .timeline > li:nth-child(even) img{
+      float: left;
+    }
+    section .timeline li:nth-child(even) dl{
+      margin-left: 130px;
+      margin-right: 0;
+    }
+    section .timeline dt {
+      font-size: 16px;
+      font-weight: bold;
+    }
+    section .timeline dd:nth-of-type(1) {
+      color: #666;
+    }
+    section .timeline > li::before {
+      position: absolute;
+      left: 50%;
+      top: 100px;
+      margin-left: -2px;
+      content: '';
+      display: inline-block;
+      height: 20px;
+      width: 4px;
+      background-color: lightgray;
+    }
+    section .timeline > li:last-child::before {
+      height: 0;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <!-- 导航 -->
+      <div class="navbar layout clearfix">
+        <a href="#" class="logo">刘老板带带你.</a>
+        <ul class="nav">
+          <li><a href="#">弹射</a></li>
+          <li><a href="#">起步</a></li>
+          <li><a href="#">请</a></li>
+          <li><a href="#">控制</a></li>
+          <li><a href="#">车速</a></li>
+        </ul>
+      </div>
+      <div class="intro layout">
+        <h1>最美好的不是未来，是今天。</h1>
+        <h2>不做下一个谁，只做第一个自己！</h2>
+        <a href="#" class="button" id="a1">P.R.C. Vanke</a>
+      </div>
+  </header>
+  <main class="layout">
+    <section>
+      <h2>生意范围</h2>
+      <p>关于刘老板的生意</p>
+      <ul class="family-intro clearfix">
+        <li>
+          <span class="iconfont icon-family1"></span>
+          <h3>制药</h3>
+          <p>
+            ops... 白云山壮骨粉正品制造商 百年老店 童叟无欺
+          </p>
+        </li>
+        <li>
+          <span class="iconfont icon-family3"></span>
+          <h3>车辆</h3>
+          <p>这个世界属于偏执狂。</p>
+        </li>
+        <li>
+          <span class="iconfont icon-family2"></span>
+          <h3>化工</h3>
+          <p>步入这行完全是因为毛发？</p>
+        </li>
+      </ul>
+    </section>
+    <section>
+      <h2>生意一览</h2>
+      <p>~~~~~~~~~~~~~~~~~~~~~~~~~~~~车展~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      </p>
+      <p>
+        我去...你空间也是没什么车的图片....
+      </p> 
+      <p>
+        所以我也就是随便摆摆...
+      </p>
+      <p>
+        好困...
+      </p>
+      <div class="family clearfix">
+        <figure>
+          <a href="#">
+            <img src="http://ugc.qpic.cn/mqq_photo/0/3a2e980a17f2645751cd682214385a1765928a1a01/0" alt="">
+          </a>
+          <figcaption>
+              这图片比例不对不是我的锅
+          </figcaption>
+          <p>
+              基佬蓝
+          </p>
+        </figure>
+        <figure>
+          <a href="#">
+            <img src="http://ugc.qpic.cn/mqq_photo/0/322f141bc60f2736921f94fc58c2953d65928a1a01/0" alt="">
+          </a>
+          <figcaption>
+              图片拉伸后这车果然是没颜值了
+          </figcaption>
+          <p>
+            脸盘好大。
+          </p>
+        </figure>
+        <figure>
+          <a href="#">
+            <img src="http://ugc.qpic.cn/mqq_photo/0/04ec57b0178cfda2f967c866dc5ac6a665928a1a01/0" alt="">
+          </a>
+          <figcaption>
+              呵呵呵呵呵呵
+          </figcaption>
+          <p>
+             。。。。
+          </p>
+        </figure>
+        <figure>
+          <a href="#">
+            <img src="http://img5.imgtn.bdimg.com/it/u=2075053933,1710821158&fm=27&gp=0.jpg" alt="">
+          </a>
+          <figcaption>
+              这个gtr倒是看上去比较和谐
+          </figcaption>
+          <p>
+              15w 的二手车怕是保养不起...
+          </p>
+        </figure>
+        <figure>
+          <a href="#">
+            <img src="http://a3.qpic.cn/psb?/V11AsHf63z4N7m/HPGEsGpXGH41ZUF5jIbKw6AoQCgnCC64UqK20JfTElw!/c/dOIAAAAAAAAA&ek=1&kp=1&pt=0&bo=WAKPAQAAAAAREPM!&t=5&vuin=354929394&tm=1512831600&sce=60-2-2&rf=0-0" alt="">
+          </a>
+          <figcaption>
+             莫名的觉得这张图好社会
+          </figcaption>
+          <p>
+              厉害了
+          </p>
+        </figure>
+        <figure>
+          <a href="#">
+            <img src="http://a2.qpic.cn/psb?/V11AsHf63z4N7m/9BYRYp*LW7WF6WVf0IFXRd.aRlTkdyFb9fXcmGJQIoM!/c/dD0BAAAAAAAA&ek=1&kp=1&pt=0&bo=WAIxAgAAAAAREE4!&t=5&vuin=354929394&tm=1512831600&sce=60-2-2&rf=0-0" alt="">
+          </a>
+          <figcaption>
+              快手既视感
+          </figcaption>
+          <p>
+              我们不一样
+          </p>
+        </figure>
+        <figure>
+          <a href="#">
+            <img src="http://a2.qpic.cn/psb?/V11AsHf63z4N7m/R0CTvRVKUTBcwDBd2VeRTmyuwDccwPXJkGqj8*hOmbE!/m/dCUAAAAAAAAA&ek=1&kp=1&pt=0&bo=WAKqAQAAAAARENY!&t=5&vuin=354929394&tm=1512831600&sce=60-4-3&rf=0-0" alt="">
+          </a>
+          <figcaption>
+              1234
+          </figcaption>
+          <p>
+              1
+          </p>
+        </figure>
+        <figure>
+          <a href="#">
+            <img src="http://a2.qpic.cn/psb?/V11AsHf63z4N7m/ivINjVSb9W8R3JUO5ajgl0PhWzuqrsu1T3LPwTysbec!/m/dCUAAAAAAAAA&ek=1&kp=1&pt=0&bo=OgJ6AQAAAAAREGQ!&t=5&vuin=354929394&tm=1512831600&sce=60-4-3&rf=0-0" alt="">
+          </a>
+          <figcaption>
+              2234
+          </figcaption>
+          <p>
+              2
+          </p>
+        </figure>
+        <figure>
+          <a href="#">
+            <img src="http://a3.qpic.cn/psb?/V11AsHf63z4N7m/kqA7p2ZweeY3nMT.ByVgZb1aZsdQAg8pnfbcbviPL5Q!/m/dIIBAAAAAAAA&ek=1&kp=1&pt=0&bo=WALCAQAAAAAREL4!&t=5&vuin=354929394&tm=1512831600&sce=60-4-3&rf=0-0" alt="">
+          </a>
+          <figcaption>
+             3234
+          </figcaption>
+          <p>
+              3
+          </p>
+        </figure>
+      </div>
+    </section>
+    <section>
+      <h2>时间轴</h2>
+      <p>ops 因为我做了个时间轴 又不想浪费... 只好...没找到你的表情包 sad。。。</p>
+      <ul class="timeline">
+        <li>
+          <img src="http://a2.qpic.cn/psb?/V11AsHf63z4N7m/L4*Vq2SwnOh8zRwUVW3BM3UcbgBGIXpS2nfr2rTj6.0!/m/dA0BAAAAAAAA&ek=1&kp=1&pt=0&bo=AAWrBqsG5QgFAMs!&t=5&vuin=354929394&tm=1512831600&sce=60-4-3&rf=0-0" alt="">
+          <dl>
+            <dt>2017?2016</dt>
+            <dd>酒</dd>
+            <dd>
+                酒
+            </dd>
+          </dl>
+        </li>
+        <li>
+          <img src="http://a4.qpic.cn/psb?/V11AsHf63z4N7m/UjwRTCWoX7YtaQyqSqzzlMqit4lLkcq4l1RcsLZd50s!/c/dOMAAAAAAAAA&ek=1&kp=1&pt=0&bo=OAQ4BAAAAAAFACM!&t=5&vuin=354929394&tm=1512831600&sce=60-2-2&rf=0-0" alt="">
+          <dl>
+            <dt>2015</dt>
+            <dd>为了部落</dd>
+            <dd>
+              ===。
+            </dd>
+          </dl>
+        </li>
+        <li>
+          <img src="http://a3.qpic.cn/psb?/V11AsHf63z4N7m/l7iU9vUc7sijOSprcrA7MJwhbrlJOKqiI04m1ZubINk!/m/dNoAAAAAAAAA&ek=1&kp=1&pt=0&bo=OASgBQAAAAAFALo!&t=5&vuin=354929394&tm=1512831600&sce=60-4-3&rf=0-0" alt="">
+          <dl>
+            <dt>2014</dt>
+            <dd>=========</dd>
+            <dd>
+              大晚上也没有看饿
+            </dd>
+          </dl>
+        </li>
+        <li>
+          <img src="http://a4.qpic.cn/psb?/V11AsHf63z4N7m/PE5TDMha6TBJrlj0DfXhkDVRhZTaruvHHmueJehcFJc!/c/dAsBAAAAAAAA&ek=1&kp=1&pt=0&bo=oAU4BAAAAAAFALo!&t=5&vuin=354929394&tm=1512831600&sce=60-2-2&rf=0-0" alt="">
+          <dl>
+            <dt>2013</dt>
+            <dd>高贵</dd>
+            <dd>
+              快完结了
+            </dd>
+          </dl>
+        </li>
+        <li>
+          <img src="http://a3.qpic.cn/psb?/V11AsHf63z4N7m/lkuwXfcskkw5fCQC5kljT6lGOP3IuB1R*ETFDzH1AuY!/c/dAoBAAAAAAAA&ek=1&kp=1&pt=0&bo=AAWrBqsG5QgFAMs!&t=5&vuin=354929394&tm=1512831600&sce=60-2-2&rf=0-0" alt="">
+          <dl>
+            <dt>2012</dt>
+            <dd>完结</dd>
+            <dd>
+              撒花~
+            </dd>
+          </dl>
+        </li>
+        <li>
+          <span class="img">
+            未来，为你而来.
+          </span>
+        </li>
+      </ul>
+    </section>
+    <section></section>
+    <section></section>
+    <script>
+      a1.onclick = function () {
+        alert('我随便抄的...啥意思--。')
+      }
+    </script>
+  </main>
+  <footer></footer>
+</body>
+</html>
